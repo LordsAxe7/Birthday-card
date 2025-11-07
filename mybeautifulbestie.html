@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My bestie</title>
+    <link rel="stylesheet" href="design2.css">
+     
+    
+</head>
+<body>
+
+<a href="index.html">here if you wanna go back</a>
+
+
+    <h1 >If you're here to oogle my bestie then yous in the right place my g</h1>
+    
+    <div class="slideshow-container">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <img src="/images/animal.jpg.jpg" alt="The winch" width="20px"  height="25px">
+        </div>
+        
+        <!-- Slide 2 -->
+        <div class="slide">
+            <img src="/images/chimp.jpg.jpg" alt="The monkey">
+        </div>
+        
+        <!-- Slide 3 -->
+        <div class="slide">
+            <img src="/images/nife2.jpg" alt="NIfe">
+        </div>
+        
+        <div class="slide">
+            <img src="/images/bestie.jpg.jpg" alt="NIfe" size="25%">
+        </div>
+        
+        <div class="slide">
+            <img src="/images/winch.jpg" alt="Witch">
+        </div>
+        
+        <!-- Navigation buttons -->
+        <button class="prev">❮</button>
+        <button class="next">❯</button>
+        
+        <!-- Dot indicators -->
+        <div class="dots-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+   
+
+    <script>
+        // Wait for the page to fully load
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Slideshow is loading...');
+            
+            // Get all slides and dots
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.dot');
+            const prevButton = document.querySelector('.prev');
+            const nextButton = document.querySelector('.next');
+            
+            let currentSlide = 0;
+            
+            // Function to show a specific slide
+            function showSlide(n) {
+                console.log('Showing slide:', n);
+                
+                // Hide all slides
+                slides.forEach(slide => {
+                    slide.style.display = 'none';
+                });
+                
+                // Remove active class from all dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                // Make sure slide index is within bounds
+                if (n >= slides.length) {
+                    currentSlide = 0;
+                } else if (n < 0) {
+                    currentSlide = slides.length - 1;
+                } else {
+                    currentSlide = n;
+                }
+                
+                // Show the current slide and activate its dot
+                slides[currentSlide].style.display = 'block';
+                dots[currentSlide].classList.add('active');
+            }
+            
+            // Function to go to next slide
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+            
+            // Function to go to previous slide
+            function prevSlide() {
+                showSlide(currentSlide - 1);
+            }
+            
+            // Function to go to a specific slide
+            function goToSlide(n) {
+                showSlide(n);
+            }
+            
+            // Add event listeners to buttons
+            prevButton.addEventListener('click', prevSlide);
+            nextButton.addEventListener('click', nextSlide);
+            
+            // Add event listeners to dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    goToSlide(index);
+                });
+            });
+            
+            // Auto-advance slides every 30 seconds
+            setInterval(nextSlide, 30000);
+            
+            // Show the first slide initially
+            showSlide(0);
+            
+            console.log('Slideshow ready! Found', slides.length, 'slides');
+        });
+    </script>
+
+
+
+
+<h2> Do you want an example of how cringe she is? &#128514; ,look at this &#128514</h2>
+
+<video controls src="/videos/cringeh.mp4" ></video>
+
+<h2>Need even more proof that she is &#128514;, here's another video to prove it </h2>
+<video controls src="/videos/idiot.mp4.mp4"></video>
+
+</body>
+</html>

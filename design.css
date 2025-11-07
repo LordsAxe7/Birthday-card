@@ -1,0 +1,23 @@
+body {background: linear-gradient( to top, darkorchid, fuchsia, darkmagenta  );
+
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+
+ }
+
+                    h1 {color:navajowhite;}
+        p1 {
+            color: mistyrose;
+        }
+        p2 {color: Ivory;}
+        p3 {color:Ivory;}
+        p4 {color :Ivory;
+        font-size: 14px;
+        font-family: 'Times New Roman', Times, serif;}
+        blockquote {color:GainsBoro;}
+        ul {color:Ivory;}
+        
+        
+        h1 {text-align:center;}
+        #p1{text-align:justify;}
+        #p2{text-align: left;}
