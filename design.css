@@ -19,5 +19,6 @@ body {background: linear-gradient( to top, darkorchid, fuchsia, darkmagenta  );
         
         
         h1 {text-align:center;}
-        #p1{text-align:justify;}
+        #p1{text-align:left;}
+
         #p2{text-align: left;}
